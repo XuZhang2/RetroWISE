@@ -90,7 +90,7 @@ Just run the prepared shell command to start pretraining according to your pretr
   bash shell_cmds/reactant_pretrain.sh
   bash shell_cmds/both_pretrain.sh
   ```
-You can get the pretrained model from [here](https://figshare.com/articles/dataset/RetroWISE-data_zip/25272451).
+You can get the pretrained model from [here](https://figshare.com/articles/dataset/RetroWISE-data_zip/25272451). Put it into the right directory, e.g., `exp/USPTO_full_pretrain_aug5_product_masked_token`.
 
 ## Train a base model 
 
@@ -124,7 +124,12 @@ bash match-template.sh
 cd filter-post
 bash compare.sh
 ```
-Alternatively, you can get the generated in-silico data from [here](https://figshare.com/articles/dataset/RetroWISE-data_zip/25272451).
+Alternatively, you can get the generated in-silico data from [here](https://figshare.com/articles/dataset/RetroWISE-data_zip/25272451). Put them into the correct directory, for example:
+
+```
+dataset/USPTO_extra_RtoP_aug5/train/filter-5/0.55/tgt-train_r.txt
+dataset/USPTO_extra_RtoP_aug5/train/filter-5/0.55/src-train_r.txt
+```
 
 ## Retrain the model
 

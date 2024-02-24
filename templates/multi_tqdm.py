@@ -11,7 +11,5 @@ def run_imap_mp(func, argument_list, num_processes='', is_tqdm=True):
         else:
             for result in pool.imap(func=func, iterable=argument_list):
                 result_list_tqdm.append(result)
-            # pool.close()  # Not needed with the context manager
-            # pool.join()  # Not needed with the context manager
     return result_list_tqdm
 

@@ -135,7 +135,6 @@ global rea_templates
 global pro_templates
 global rea_templates_s
 global pro_templates_s
-#with open('uspto.templates.greater50times.smiles.json', 'r') as f:
 with open(opt.rea_template, 'r') as f:
     rea_templates_s = json.load(f)
 with open(opt.pro_template, 'r') as f:
