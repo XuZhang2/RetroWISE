@@ -1,0 +1,13 @@
+model: exp/USPTO_extra_50K_PtoR_raw_bt/finetune_average_model_36-40-batch9k-extra-filter5-fp0.55-fullfill-no1.5.pt
+#model : exp/USPTO_50K_PtoR_aug20/USPTO_50K_PtoR_official.pt
+#src: dataset/less-frequency_PtoR_aug5_seed33/val/src-val.txt
+src: dataset/USPTO_50K_PtoR_aug20_seed33_class/test/src-test.txt
+output: dataset/USPTO_50K_PtoR_aug20_seed33_class/test/tgt-test-fp055.txt
+#output: dataset/less-frequency_PtoR_aug5_seed33/val/less-5-tgt-base.txt
+gpu: 7
+beam_size: 50
+n_best: 50
+batch_size: 4096
+batch_type: tokens
+max_length: 500
+seed: 0

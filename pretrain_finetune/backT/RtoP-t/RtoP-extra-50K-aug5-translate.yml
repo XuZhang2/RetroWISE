@@ -1,0 +1,11 @@
+model: exp/USPTO_extra_50k_raw_bt/finetune_average_model_26-30.pt
+#model: exp/USPTO_50K_RtoP_aug20/finetune_average_model_v2_26-30.pt
+src: dataset/USPTO_extra_RtoP_aug5/train/src-train.txt
+output: exp/USPTO_extra_50k_raw_bt/backT_50k_26-30-results_best1.txt
+gpu: 0
+beam_size: 50
+n_best: 1
+batch_size: 8192
+batch_type: tokens
+max_length: 1000
+seed: 0

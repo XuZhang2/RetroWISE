@@ -1,0 +1,11 @@
+model: exp/USPTO_full_PtoR_aug5/finetune_average_model_46-50.pt
+src: dataset/zinc-products/zinc-20m.txt
+src: dataset/pubchem/pubchem-10mproducts-fine50-rest.txt
+output: dataset/zinc-reactants/zinc-20m.txt
+gpu: 1
+beam_size: 50
+n_best: 1
+batch_size: 2048
+batch_type: tokens
+max_length: 1000
+seed: 0

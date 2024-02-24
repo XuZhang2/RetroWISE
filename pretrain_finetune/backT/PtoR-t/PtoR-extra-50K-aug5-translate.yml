@@ -1,0 +1,11 @@
+model: exp/USPTO_50K_PtoR_aug20/finetune_average_model_56-60.pt
+src: exp/USPTO_extra_50k_raw_bt/backT_50k_26-30-results_best1.txt
+output: exp/USPTO_extra_50k_raw_bt/backT_50k_26-30-results_best1-compare-real.txt
+gpu: 0
+beam_size: 10
+n_best: 1
+batch_size: 8192
+batch_type: tokens
+max_length: 500
+seed: 0
+log_file: log/USPTO_extra_50k_raw_bt/finetune_model_reactants-products-translate_26-30-best1-compare-real.log

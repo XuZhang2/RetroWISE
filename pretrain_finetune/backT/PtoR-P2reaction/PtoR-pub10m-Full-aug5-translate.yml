@@ -1,0 +1,10 @@
+model: exp/USPTO_full_PtoR_aug5/finetune_average_model_46-50.pt
+src: dataset/pubchem-10m/pubchem-10m_tokened_4m-longest.txt
+output: dataset/pubchem-10m/pubchem-10m-full-4m-reactants-longest.txt
+gpu: 1
+beam_size: 40
+n_best: 1
+batch_size: 4096
+batch_type: tokens
+max_length: 1000
+seed: 0

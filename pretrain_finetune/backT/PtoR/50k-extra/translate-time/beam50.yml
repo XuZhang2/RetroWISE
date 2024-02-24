@@ -1,0 +1,22 @@
+model: exp/USPTO_extra_50K_PtoR_raw_bt/finetune_average_model_36-40-batch9k-extra.pt
+src: dataset/USPTO_50K_PtoR_aug20/test/src-test.txt
+output: exp/USPTO_extra_50K_PtoR_raw_bt/beam50.txt
+gpu: 2
+beam_size: 50
+n_best: 50
+batch_size: 4096
+batch_type: tokens
+max_length: 500
+seed: 0
+#------------------------------------------------#
+# model: exp/USPTO_50K_PtoR_aug20/finetune_average_model_56-60.pt
+# src: dataset/USPTO_50K_PtoR_aug20_seed33/test/src-test.txt
+# output: exp/USPTO_50K_PtoR_aug20/finetune_average_model_56-60-results-seed33.txt 
+# gpu: 1
+# beam_size: 10
+# n_best: 10
+# batch_size: 4096
+# batch_type: tokens
+# max_length: 500
+# seed: 0
+#------------------------------------------------#
