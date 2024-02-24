@@ -47,12 +47,41 @@ All the config files are placed in the `pretrain_finetune` folder. Using OpenNMT
 
 ## Data preprocessing
 
-Follow [Zhong's code](https://github.com/otori-bird/retrosynthesis) to preprocess data. 
+Download the datasets and put them in the `dataset` directory like this:
+
+```shell
+USPTO-50K: dataset/USPTO_50K/raw_train.csv
+USPTO-MIT: dataset/USPTO-MIT/train.txt
+USPTO_full: dataset/USPTO_full/raw_train.csv
+```
+
+Generate the pretrain data with SMILES augmentation:
+
+```
+python preprocessing/generate_pretrain_data.py -mode product -augmentation 5
+python preprocessing/generate_masked_pretrain_data.py -dataset USPTO_full_pretrain_aug5_product
+```
+
+Generate the dataset with R-SMILES augmentation:
+
+```
+python preprocessing/generate_PtoR_data.py -dataset USPTO_50K -augmentation 20 -processes 8
+python preprocessing/generate_PtoR_data.py -dataset USPTO-MIT -augmentation 5 -processes 8
+python preprocessing/generate_PtoR_data.py -dataset USPTO_full -augmentation 5 -processes 8
+```
+
+Similar operations (need to modify some codes of generate_PtoR_data.py) for Rare-subsets:
+
+```
+Rare2: dataset/low-frequency/Rare2.csv
+Rare5: dataset/low-frequency/Rare5.csv
+Rare10: dataset/low-frequency/Rare10.csv
+```
 
 
 ## Pretrain 
 
-​	(**Generate all the datasets in advance to build a full vocab before pretraining the model.**)
+​(**Generate all the datasets in advance to build a full vocab before pretraining the model.**)
 
 Just run the prepared shell command to start pretraining according to your pretrain dataset.
 
