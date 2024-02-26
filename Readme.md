@@ -137,6 +137,15 @@ Place the generated data in the correct directory.
 
 Run the bash script to get the final prediction score.
 
+## Translate with the prepared checkpoint
+
+Download the checkpoint from [here](https://figshare.com/articles/dataset/RetroWISE-data_zip/25272451) and place it into the `exp/USPTO_extra_50K_PtoR_raw_bt`. Run the following commands to get the predictions and scores. 
+
+```
+onmt_translate -config -config pretrain_finetune/backT/PtoR/50k-extra/PtoR-50K-aug20-translate.yml
+bash btbash/score-extra-50k.sh
+```
+
 ```shell
 bash btbash/50k.sh
 ```
